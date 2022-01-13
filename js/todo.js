@@ -38,7 +38,6 @@ function paintToDo(newTodo) {
 }
 
 
-
 function handleTodoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
