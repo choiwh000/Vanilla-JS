@@ -26,6 +26,7 @@ function deleteTodo(event) {
 function paintToDo(newTodo) {
     const li = document.createElement('li');
     li.id = newTodo.id;
+    li.classList.add('efec');
     const span = document.createElement('span');
     span.innerText = newTodo.text;
     const button = document.createElement('button');
