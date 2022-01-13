@@ -18,5 +18,75 @@ img {
 }
 
 input {
-    color: #333;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    
+}
+
+input::placeholder {
+    text-align: center;
+    color: #fff;
+    font-size:20px;
+    transition: all 0.15s linear;
+}
+
+input:focus {
+    outline: none;
+    width: 250px;
+    border-bottom: 1px solid #fff;
+    transition: all 0.4s linear;
+}
+
+input:focus::-webkit-input-placeholder {
+    color:transparent;
+}
+
+
+button {
+    color: #fff;
+}
+
+
+#clock {
+    text-align: center;
+    font-size: 80px;
+    margin-top: 250px;
+}
+
+#greeting {
+    text-align: center;
+}
+
+#login-form {
+    margin-top: 20px;
+    text-align: center;
+    height: 50px;
+}
+
+#todo-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#todo-form input {
+    width: 500px;
+    height: 60px;
+    font-size: 25px;
+}
+
+#todo-form input::placeholder {
+    font-size: 25px;
+}
+
+
+#weather {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    font-size: 20px;
 }
