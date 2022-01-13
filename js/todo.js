@@ -13,8 +13,9 @@ function saveTodos() {
 
 function deleteTodo(event) {
     const li = event.target.parentElement;
-    li.classList.add('deleteAni');
-    setTimeout(() => {li.remove(); }, 500);
+    // li.classList.add('deleteAni');
+    li.remove();
+    // setTimeout(() => {li.remove(); }, 500);
     
     toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     saveTodos();
