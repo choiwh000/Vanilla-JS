@@ -13,7 +13,9 @@ function saveTodos() {
 
 function deleteTodo(event) {
     const li = event.target.parentElement;
-    li.remove();
+    li.classList.add('deleteAni');
+    setTimeout(() => {li.remove(); }, 500);
+    
     toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     saveTodos();
     
@@ -27,7 +29,7 @@ function paintToDo(newTodo) {
     const span = document.createElement('span');
     span.innerText = newTodo.text;
     const button = document.createElement('button');
-    button.innerText = "❌";
+    button.innerText = "";
     button.addEventListener('click', deleteTodo);
     li.appendChild(span);
     li.appendChild(button);

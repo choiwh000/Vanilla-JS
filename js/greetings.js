@@ -11,6 +11,7 @@ const USERNAME_KEY = 'username';
         const username = loginInput.value;
         localStorage.setItem( USERNAME_KEY , username);
         paintGreeting(username);
+        todo.classList.remove(Hidden_CLASSNAME);
     }
 
     function paintGreeting(username) {
@@ -19,10 +20,12 @@ const USERNAME_KEY = 'username';
     }
 
     const savedUsername = localStorage.getItem(USERNAME_KEY);
+    const todo = document.querySelector('#todo-form');
  
     if(savedUsername === null){
         loginForm.classList.remove(Hidden_CLASSNAME);
-        loginForm.addEventListener('submit', onLoginSubmit)
+        loginForm.addEventListener('submit', onLoginSubmit);
     } else {
         paintGreeting(savedUsername);
+        todo.classList.remove(Hidden_CLASSNAME);
     }
