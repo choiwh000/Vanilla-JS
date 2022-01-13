@@ -6,7 +6,7 @@ function getClock() {
     const sec = String(new Date().getSeconds()).padStart(2, "0");
     const hr = String(new Date().getHours()).padStart(2, "0");
 
-    clock.innerText = `${hr} : ${min} : ${sec}`;
+    clock.innerText = `${hr} : ${min}`;
 }
 
 
